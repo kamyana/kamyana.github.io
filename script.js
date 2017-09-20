@@ -57,18 +57,17 @@ function showTime (mnbegin,buses)
 		}
 	}
 	var eachTT = function()
-	{showTime(rkam,busKam);
-		if (bus!=undefined)
-		{
-			document.getElementById("p1").innerHTML = "Автобус № " + bus + " на Кам'яну відправиться о " + mnCount + ', через ' + mnforarrive + ' хвилин.';
-			showTime(rcher,busCher);
-			document.getElementById("p2").innerHTML = "Автобус № " + bus + " на Чернівці відправиться о " + mnCount + ', через ' + mnforarrive + ' хвилин.';
-		}
- 	else
 	{
-		document.getElementById("p1").innerHTML = "Автобус № 2 на Кам'яну відправиться о 6:30";
-		document.getElementById("p2").innerHTML = "Автобус № 1 на Чернівці відправиться о 6:30";
-	}
+			showTime(rkam,busKam);
+			if (bus==undefined)
+			{document.getElementById("p1").innerHTML = "Автобус № 2 на Кам'яну відправиться о 6:30";}
+			else
+			{document.getElementById("p1").innerHTML = "Автобус № " + bus + " на Кам'яну відправиться о " + mnCount + ', через ' + mnforarrive + ' хвилин.';}
+				showTime(rcher,busCher);
+				if (bus==undefined)
+				{document.getElementById("p2").innerHTML = "Автобус № 1 на Чернівці відправиться о 6:30";}
+				else
+				{document.getElementById("p2").innerHTML = "Автобус № " + bus + " на Чернівці відправиться о " + mnCount + ', через ' + mnforarrive + ' хвилин.';}
 	}
 	eachTT();
 	setInterval(eachTT, 10000);
