@@ -1,0 +1,28 @@
+	body {
+	font-family: 'Roboto', sans-serif;
+	}
+
+	table {
+	border-collapse: collapse; /* Убираем двойные линии между ячейками */
+	width: 600px;
+	}
+	th, td {
+	border: 1px solid black; /* Параметры рамки */
+	text-align: center; /* Выравнивание по центру */
+	padding: 4px; /* Поля вокруг текста */
+	}
+	th {
+	color: #FFFFFF;
+	background: #171BAF; /* Цвет фона ячейки */
+	height: 20px; /* Высота ячеек */
+	vertical-align: bottom; /* Выравнивание по нижнему краю */
+	padding: 0; /* Убираем поля вокруг текста */
+	}
+
+	td#br1 {
+border-right-width: 3px;
+
+ }
+ th#br2 {
+border-right-width: 3px;
+}
